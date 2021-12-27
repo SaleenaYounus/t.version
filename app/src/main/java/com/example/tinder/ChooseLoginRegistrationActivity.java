@@ -44,4 +44,3 @@ public class ChooseLoginRegistrationActivity extends AppCompatActivity {
 
 
 }
-

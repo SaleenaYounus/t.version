@@ -1,5 +1,4 @@
 package com.example.tinder;
-
 public class cards {
     private String userId; /*which is need to connect the DB*/
     private String name; /*which shows the current user*/
