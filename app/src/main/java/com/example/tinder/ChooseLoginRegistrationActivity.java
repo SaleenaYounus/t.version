@@ -8,7 +8,8 @@ import android.view.View;
 import android.widget.Button;
 
 public class ChooseLoginRegistrationActivity extends AppCompatActivity {
-    private Button mLogin, mRegister;
+    private Button mLogin,mRegister;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,12 +17,12 @@ public class ChooseLoginRegistrationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_choose_login_registration);
 
         mLogin = (Button) findViewById(R.id.login);
-        mRegister = (Button)  findViewById(R.id.register);
+        mRegister = (Button) findViewById(R.id.register);
 
         mLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ChooseLoginRegistrationActivity.this,LoginActivity.class);
+            public void onClick(View v) {
+                Intent intent = new Intent(ChooseLoginRegistrationActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
                 return;
@@ -32,7 +33,7 @@ public class ChooseLoginRegistrationActivity extends AppCompatActivity {
         mRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ChooseLoginRegistrationActivity.this,RegistrationActivity.class);
+                Intent intent = new Intent(ChooseLoginRegistrationActivity.this, RegistrationActivity.class);
                 startActivity(intent);
                 finish();
                 return;
@@ -40,4 +41,7 @@ public class ChooseLoginRegistrationActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }
+
