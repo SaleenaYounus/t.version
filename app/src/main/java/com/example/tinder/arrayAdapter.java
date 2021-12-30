@@ -39,7 +39,6 @@ class arrayAdapter extends ArrayAdapter<cards> {
                 Glide.with(convertView.getContext()).load(card_item.getProfileImageUrl()).into(image);
                 break;
         }
-
         return convertView;
 
     }

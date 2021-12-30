@@ -187,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
         DatabaseReference oppositeSexDb = FirebaseDatabase.getInstance().getReference().child("Users").child(oppositeUserSex);
         oppositeSexDb.addChildEventListener(new ChildEventListener() {
             @Override
-            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+            public void onChildAdded(DataSnapshot snapshot, String previousChildName) {
                 if (snapshot.exists() && !snapshot.child("connections").child("nope").hasChild(currentUid) && !snapshot.child("connections").child("yeps").hasChild(currentUid)) {
                     //check for default image
                     String profileImageUrl = "default";
