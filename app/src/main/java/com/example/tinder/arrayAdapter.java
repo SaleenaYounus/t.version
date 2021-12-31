@@ -1,7 +1,5 @@
 package com.example.tinder;
 
-import static com.example.tinder.R.mipmap.ic_launcher_round;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,13 +30,14 @@ class arrayAdapter extends ArrayAdapter<cards> {
         //placing the image in the image view;
         switch (card_item.getProfileImageUrl()){
             case "default":
-               Glide.with(convertView.getContext()).load(R.mipmap.ic_launcher).into(image);
+                Glide.with(convertView.getContext()).load(R.mipmap.ic_launcher).into(image);
                 break;
             default:
                 Glide.clear(image);
                 Glide.with(convertView.getContext()).load(card_item.getProfileImageUrl()).into(image);
                 break;
         }
+
         return convertView;
 
     }
